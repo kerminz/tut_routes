@@ -3,6 +3,9 @@ const app = express()
 app.use(express.json());
 const port = process.env.PORT || 3001
 
+// import der Routes
+const userRoutes = require('./routes/user');
+app.use(userRoutes)
 
 
 app.listen(port, (err) => {
